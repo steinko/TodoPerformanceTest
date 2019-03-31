@@ -1,0 +1,14 @@
+services:
+- docker
+dist: trusty
+before_install:
+- openssl aes-256-cbc -K $encrypted_1b258f391fa9_key -iv $encrypted_1b258f391fa9_iv
+  -in appengine-account.json.enc -out appengine-account.json -d
+
+script:
+- docker build -t=todoperformancetest:1 .
+- docker run todoperformancetest:1
+after_script:
+- gcloud auth activate-service-account spinnaker-appengine-account@project-235906.iam.gserviceaccount.com
+  --key-file=appengine-account.json
+- gcloud app deploy

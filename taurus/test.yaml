@@ -1,0 +1,25 @@
+execution:
+- concurrency: 10
+  hold-for: 5m
+  ramp-up: 2m
+  scenario: yaml_example
+  
+scenarios:
+  yaml_example:
+    retrieve-resources: false
+    requests:
+      - https://project-235906.appspot.com/hello-world"
+
+reporting:
+- module: final-stats
+- module: console
+
+settings:
+  check-interval: 5s
+  default-executor: jmeter
+
+provisioning: local
+
+reporting:
+- final-stats
+- blazemeter
