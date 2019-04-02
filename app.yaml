@@ -2,4 +2,4 @@ runtime: custom
 env: flex
 service: todoperformancetest
 env_variables:
-  TAURUS_baseUrl: "https://todofrontend-dot-project-235906.appspot.com"
+  TAURUS_baseUrl: "https://project-235906.appspot.com"
