@@ -16,9 +16,9 @@ scenarios:
   yaml_example:
     retrieve-resources: false
     requests:
-      - ${TAURUS_baseUrl}/hello-world"
-      - ${TAURUS_baseUrl}/hello-world-bean"
-      - ${TAURUS_baseUrl}/hello-world/path-variabel/stein"
+      - https://project-235906.appspot.com/hello-world
+      - https://project-235906.appspot.com/hello-world-bean
+      - https://project-235906.appspot.com/hello-world/path-variabel/stein
 
 reporting:
 - module: final-stats
