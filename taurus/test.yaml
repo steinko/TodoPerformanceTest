@@ -1,11 +1,11 @@
 modules:
   blazemeter:
-    token: 2460fcfb1e9b205a92083271
+    token: 2460fcfb1e9b205a92083271:374c15b0fe0b16b6a2753b5d630f9fcdbdbb4c13798d432873e96f46e569161c5a96fc89
 
 settings:
   env:
     TAURUS_baseUrl: https://project-235906.appspot.com/
-    
+
 execution:
 - concurrency: 10
   hold-for: 5m
