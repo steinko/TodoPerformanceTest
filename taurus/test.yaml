@@ -16,9 +16,9 @@ scenarios:
   yaml_example:
     retrieve-resources: false
     requests:
-      - ${TAURUS_baseUrl}/hello-world
-      - ${TAURUS_baseUrl}/hello-world-bean
-      " ${TAURUS_baseUrl}/hello-world/path-variabel/stein
+      - ${TAURUS_baseUrl}/hello-world"
+      - ${TAURUS_baseUrl}/hello-world-bean"
+      " ${TAURUS_baseUrl}/hello-world/path-variabel/stein"
 
 reporting:
 - module: final-stats
