@@ -1,6 +1,6 @@
 install:
 - sudo apt-get update
 - sudo apt-get install python default-jre-headless python-tk python-pip python-dev libxml2-dev libxslt-dev zlib1g-dev net-tools
-- sudo pip install bzt  -o provisioning=cloud 
+- sudo pip install bzt
 script:
-- bzt taurus/test.yaml 
+- bzt taurus/test.yaml -o  provisioning=cloud
