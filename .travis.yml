@@ -1,15 +1,6 @@
-services:
-- docker
-dist: trusty
-before_install:
-- openssl aes-256-cbc -K $encrypted_71320ef24817_key -iv $encrypted_71320ef24817_iv -in appengine-account.json.enc -out appengine-account.json -d
-
+install:
+- sudo apt-get update
+- sudo apt-get install python default-jre-headless python-tk python-pip python-dev libxml2-dev libxslt-dev zlib1g-dev net-tools
+- sudo pip install bzt  -o provisioning=cloud 
 script:
-- docker build -t=todoperformancetest:1 .
-- docker run todoperformancetest:1
-env:
-  TAURUS_baseUrl=https://todofrontend-dot-project-235906.appspot.com
-deploy:
-  provider: gae
-  keyfile: appengine-account.json
-  project: project-235906
+- bzt taurus/test.yaml 
